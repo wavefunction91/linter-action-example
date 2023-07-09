@@ -1,10 +1,8 @@
 name: CI
 
 on: 
-  workflow_run:
-    workflows: ["Run clang-format"]
-    types:
-      - completed
+  pull_request:
+    types: [synchronize]
 
 jobs:
   ci:
